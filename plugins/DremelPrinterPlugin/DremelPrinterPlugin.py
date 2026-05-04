@@ -631,7 +631,7 @@ class DremelPrinterPlugin(QObject, MeshWriter, Extension):
     ##  breakdown of the dremel g3drem file format see the following page:
     ##  https://github.com/metalman3797/Cura-Dremel-3D20-Plugin/blob/master/README.md#technical-details-of-the-g3drem-file-format
     ######################################################################
-    def write(self, stream, nodes, mode = MeshWriter.OutputMode.BinaryMode):
+    def write(self, stream, nodes, mode = MeshWriter.OutputMode.BinaryMode, mime_type=None):
         try:
             if mode != MeshWriter.OutputMode.BinaryMode:
                 Logger.log("e", "Dremel Plugin does not support non-binary mode.")
